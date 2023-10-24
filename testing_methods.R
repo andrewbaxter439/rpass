@@ -1,7 +1,7 @@
 library(readr)
 library(data.table)
 
-file_path <- file.path("data", "words_c.txt")
+file_path <- file.path("data", "words.txt")
 min_l <- 4
 max_l <- 8
 
