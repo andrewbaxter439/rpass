@@ -1,2 +1,4 @@
 ^rpass\.Rproj$
 ^\.Rproj\.user$
+src/cpass.cpp
+cpass.exe

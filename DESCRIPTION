@@ -13,5 +13,7 @@ RoxygenNote: 7.2.3
 Suggests: 
     testthat (>= 3.0.0)
 Imports:
-    readr
+    readr,
+    Rcpp(>= 0.11.0)
+LinkingTo: Rcpp
 Config/testthat/edition: 3
