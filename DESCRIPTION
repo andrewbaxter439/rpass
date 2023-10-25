@@ -1,6 +1,6 @@
 Package: rpass
 Title: Generate a four-random-word password
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: person("Andy", "Baxter", role = c("aut", "cre"),
                      email = "andy@andybaxter.me")
 Author: Andy Baxter [aut, cre]
