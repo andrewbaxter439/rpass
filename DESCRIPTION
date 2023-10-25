@@ -1,11 +1,11 @@
 Package: rpass
-Title: What the Package Does (One Line, Title Case)
+Title: Generate a four-random-word password
 Version: 0.0.0.9000
 Authors@R: person("Andy", "Baxter", role = c("aut", "cre"),
                      email = "andy@andybaxter.me")
 Author: Andy Baxter [aut, cre]
 Maintainer: Andy Baxter <andy@andybaxter.me>
-Description: What the package does (one paragraph).
+Description: Correct-horse-battery-stable passwords, with customisable length, separators and complexity of words.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

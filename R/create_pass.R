@@ -12,7 +12,7 @@
 
 create_pass <- function(nwords = 4,
                         min_l = 4,
-                        max_l = 8,
+                        max_l = 12,
                         sep = "-",
                         complex = FALSE,
                         seed = NULL) {
