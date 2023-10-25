@@ -3,3 +3,4 @@
 export(create_pass)
 importFrom(readr,AccumulateCallback)
 importFrom(readr,read_lines_chunked)
+useDynLib(rpass, .registration = TRUE)
