@@ -10,8 +10,7 @@ create_pass(
   max_l = 8,
   sep = "-",
   complex = FALSE,
-  seed = NULL,
-  words_dir = "data"
+  seed = NULL
 )
 }
 \arguments{
@@ -26,8 +25,6 @@ create_pass(
 \item{complex}{Whether to allow the full dictionary set of complex words}
 
 \item{seed}{Set random seed (unset by default)}
-
-\item{words_dir}{Directory containing word files}
 }
 \description{
 Creates a password

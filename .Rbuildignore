@@ -5,3 +5,6 @@ cpass.exe
 .Rhistory
 .gititnore
 .git
+rpass.zip
+testing_methods.R
+^LICENSE\.md$
