@@ -8,7 +8,6 @@
 #' @param sep Separator between words
 #' @param complex Whether to allow the full dictionary set of complex words
 #' @param seed Set random seed (unset by default)
-#' @param words_dir Directory containing word files
 #'
 
 create_pass <- function(nwords = 4,
@@ -16,12 +15,12 @@ create_pass <- function(nwords = 4,
                         max_l = 8,
                         sep = "-",
                         complex = FALSE,
-                        seed = NULL,
-                        words_dir = "data") {
+                        seed = NULL) {
 
   if (!is.null(seed)) set.seed(seed)
 
-  file_path <- file.path(words_dir, ifelse(complex, "words.txt", "words_c.txt"))
+  file_name <- ifelse(complex, "words.txt", "words_c.txt")
+  file_path <- system.file("extdata", file_name, package = "rpass")
 
   words <- .read_cpp(file_path, min_l, max_l)
 
