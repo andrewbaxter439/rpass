@@ -1,8 +1,3 @@
-## usethis namespace: start
-#' @useDynLib rpass, .registration = TRUE
-## usethis namespace: end
-NULL
-
 #'
 #' Creates a password
 #' @export
@@ -15,8 +10,6 @@ NULL
 #' @param seed Set random seed (unset by default)
 #' @param words_dir Directory containing word files
 #'
-#' @importFrom readr read_lines_chunked
-#' @importFrom readr AccumulateCallback
 
 create_pass <- function(nwords = 4,
                         min_l = 4,
@@ -30,18 +23,10 @@ create_pass <- function(nwords = 4,
 
   file_path <- file.path(words_dir, ifelse(complex, "words.txt", "words_c.txt"))
 
-  # words <- read_lines_chunked(file_path,
-  #                             chunk_size = 150000,
-  #                             progress = FALSE,
-  #                             callback = AccumulateCallback$new(
-  #                               \(x, pos, acc) c(acc, x[grepl(paste0("^.{", min_l, ",", max_l, "}$"), x)]))
-  # )
-
-  words <- read_cpp_len(file_path, min_l, max_l)
+  words <- .read_cpp(file_path, min_l, max_l)
 
   sample(words, nwords) |>
     paste(collapse = sep)
 
 }
 
-create_pass()

@@ -5,7 +5,7 @@
 using namespace Rcpp;
 
 
-// [[Rcpp::export]]
+// [[Rcpp::export(.read_cpp)]]
 StringVector read_cpp_len(String file_name, unsigned long min_l, unsigned long max_l) {
 
   // Rcpp::StringVector out_arr;
