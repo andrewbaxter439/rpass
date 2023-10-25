@@ -25,14 +25,14 @@ create_pass <- function(nwords = 4,
 
   file_path <- file.path(words_dir, ifelse(complex, "words.txt", "words_c.txt"))
 
-  # words <- read_lines_chunked(file_path,
-  #                             chunk_size = 150000,
-  #                             progress = FALSE,
-  #                             callback = AccumulateCallback$new(
-  #                               \(x, pos, acc) c(acc, x[grepl(paste0("^.{", min_l, ",", max_l, "}$"), x)]))
-  # )
+  words <- read_lines_chunked(file_path,
+                              chunk_size = 150000,
+                              progress = FALSE,
+                              callback = AccumulateCallback$new(
+                                \(x, pos, acc) c(acc, x[grepl(paste0("^.{", min_l, ",", max_l, "}$"), x)]))
+  )
 
-  words <- read_cpp_len(file_path, min_l, max_l)
+  # words <- read_cpp_len(file_path, min_l, max_l)
 
   sample(words, nwords) |>
     paste(collapse = sep)
