@@ -8,3 +8,5 @@ cpass.exe
 rpass.zip
 testing_methods.R
 ^LICENSE\.md$
+^\.github$
+^README\.Rmd$
